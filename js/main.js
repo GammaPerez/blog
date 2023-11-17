@@ -1,27 +1,8 @@
 $("document").ready(function () {
     setLinksNoticias();
-    $("#dlg").dialog({
-		title: 'Documentos',
-		autoOpen: false,
-		type: "blue",
-		width: '60%',
-		height: "auto",
-		maxHeight: innerHeight - 150,
-		useBootstrap: false,
-		typeAnimated: true,
-		buttons: [{
-			text: 'Cancelar',
-			id: "btnCancelViewDocs",
-			style: "color:white; background-color: red; border-color: red; font-size: 12px; font-weight: bold; padding: 5px 10px; border-radius: 3px; cursor: pointer;",
-			click: cerrarDlg
-		}
-		]
-	});
+    setModal();
 });
 
-function cerrarDlg() {
-	$(this).dialog("close");
-}
 
 function setLinksNoticias() {
     for (let i = 1; i <= 6; i++) {
@@ -30,12 +11,19 @@ function setLinksNoticias() {
         });
     }
 }
-/*
-function setModal(){
-    for(let i = 1; i <= 3; i++){
-        $("#link-" + i).click(function(){
+
+function setModal() {
+    for (let i = 1; i <= 3; i++) {
+        $("#link-" + i).click(function () {
+            const cuerpo = `
+            <div>  
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus corporis 
+                blanditiis odio asperiores placeat eius fuga ad facilis aut laborum exercitationem 
+                doloribus nihil, provident quae vitae quis repellendus, iure veniam.
+            </div>
+            `;
             $.dialog({
-                title: '<span>Ayuda</span>',
+                title: '<span>Importar Excel</span>',
                 content: cuerpo,
                 type: "green",
                 boxWidth: '450px',
@@ -45,8 +33,21 @@ function setModal(){
         });
     }
 }
-*/
-$("#link-1").click(function () { dlgimportexcel(); });
-const dlgimportexcel = () => {
-$("#dlg").dialog("open");
-}
+
+$("#newEnt").click(function(){
+    const form = `
+    <div>
+        <form id="frmNewReg">
+            
+        </form>
+    </div>
+    `;
+    $.dialog({
+        title: '<span>Nueva Registro</span>',
+        content: form,
+        type: "green",
+        boxWidth: '450px',
+        useBootstrap: false,
+        typeAnimated: true,
+    });
+});
