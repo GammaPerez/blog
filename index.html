@@ -11,12 +11,9 @@
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
             integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
             crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        
         <!---------->
-
-        <!--USO DE DIALOG LIKE $.DIALOG-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js" integrity="sha512-zP5W8791v1A6FToy+viyoyUUyjCzx+4K8XZCKzW28AnCoepPNIXecxh9mvGuy3Rt78OzEsU+VCvcObwAMvBAww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css" integrity="sha512-0V10q+b1Iumz67sVDL8LPFZEEavo6H/nBSyghr7mm9JEQkOAm91HNoZQRvQdjennBb/oEuW+8oZHVpIKq+d25g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!------------>
 
         <!--BOOTSTRAP-->
         <link
@@ -38,6 +35,18 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--------------->
+
+        <!--USO DE DIALOG LIKE $.DIALOG-->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"
+            integrity="sha512-zP5W8791v1A6FToy+viyoyUUyjCzx+4K8XZCKzW28AnCoepPNIXecxh9mvGuy3Rt78OzEsU+VCvcObwAMvBAww=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css"
+            integrity="sha512-0V10q+b1Iumz67sVDL8LPFZEEavo6H/nBSyghr7mm9JEQkOAm91HNoZQRvQdjennBb/oEuW+8oZHVpIKq+d25g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!------------>
+
         <title>Welcome</title>
     </head>
     <body>
@@ -64,7 +73,8 @@
                                 <a href="#" class="nav-link">Menu 1</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link" id="newEnt">Crear Entrada</a>
+                                <a href="#" class="nav-link" id="newEnt">Crear
+                                    Entrada</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#contacto" class="nav-link">Contacto</a>
@@ -162,47 +172,39 @@
                         <a href="#" class="enlace_grl" id="link-3">Leer más</a>
                     </div>
                 </div>
+            </section>
 
+            <div id="dlgFrmEnt" title="Nuevo Registro">
                 <form id="frmNewReg">
-                    <div class="">
-
+                    <div class>
                         <div class="frmNewTitle">
                             <label for="name"></label>
-                            <input type="text" name="name" id="frmName" placeholder="Ingrese Titulo" required>
+                            <input type="text" name="name" id="frmName"
+                                placeholder="Ingrese Titulo" required>
                         </div>
                         <div class="frmNewCont">
                             <label for="name"></label>
-                            <textarea name="frmCont" id="frmCont" cols="30" rows="10" placeholder="Ingrese Contenido" required></textarea>
+                            <textarea name="frmCont" id="frmCont" cols="30"
+                                rows="10" placeholder="Ingrese Contenido"
+                                required></textarea>
                         </div>
 
                         <div class="frmNewImg">
-                            <label for="name"></label>
-                            <input type="file" name="frmImg" id="frmImg" placeholder="Ingrese Imagen" required>
+                            <label for="frmImg">IMAGEN (OPCIONAL)</label>
+                            <input type="file" class="py-2" name="frmImg"
+                                id="frmImg"
+                                placeholder="Ingrese Imagen" accept="image/*">
                         </div>
-                        <div class ="frmNewSend submit">
-                            <input type="submit" value="Enviar" class="" id="frmSend">
+                        <div
+                            class="frmNewSend submit py-3 d-flex justify-content-center">
+                            <input type="button" value="Enviar"
+                                class="form_button"
+                                id="frmSend">
                         </div>
-                        <!--
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control"
-                                id="txtTitulo" placeholder="Titulo">
-                            <label for="txtTitulo">Titulo</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" placeholder="Cuerpo"
-                                id="txtCuerpo" style="height: 100px"></textarea>
-                            <label for="txtCuerpo">Cuerpo</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control"
-                                id="txtImagen" placeholder="Imagen">
-                            <label for="txtImagen">Imagen</label>
-                        </div>
-                        -->
                     </div>
                 </form>
-            </section>
-
+            </div>
+            
 
             <section class="menu">
                 <span class="bold h4">Anuncios</span>
