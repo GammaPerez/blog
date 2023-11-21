@@ -8,18 +8,7 @@ $("document").ready(function () {
     $("#dlgFrmEnt").dialog({
         autoOpen: false,
         modal: true,
-        width: 500,
-        /*
-        buttons: {
-            "Guardar": function () {
-                let data = $("#frmNewReg").serialize();
-                console.log(data);
-                $(this).dialog("close");
-            },
-            "Cancelar": function () {
-                $(this).dialog("close");
-            }
-        }*/
+        width: 500
     });
 });
 
@@ -66,7 +55,7 @@ $("#frmSend").click(function () {
     contador++;
     let newObj = {
         titulos: titulo.value,
-        contenidos: contenido.value,
+        contenidos: contenido.value.replace(/\n/g, "<br>"),
         imagenes: imagen.value,
     }
     console.log(newObj);
